@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <%data.forEach(val=>{%>
+<div>
+    <h2><%=val.name%></h2>
+    <p><%=val.price%></p>
+    <img src="<%=val.image_link%>">
+   <form action="/viewDetails/<%=val.id%>" method="POST">
+    <form  action="/addToMyProduct" method="POST">
+        <input type="hidden" name="name" value="<%=val.name%>">
+        <input type="hidden" name="price" value="<%=val.price%>">
+        <input type="hidden" name="image" value="<%=val.image_link%>">
+        <input type="hidden" name="description" value="<%=val.description%>">
+        <button type="submit">view details</button>
+</form>
+</div>
+
+
+       >% })%>
+    </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <main>
+    <h2><%=data.name%></h2>
+    <p><%=data.price%></p>
+    <img src="<%=data.image_link%>">
+    <p><%=data.description%></p>
+<form action="/update/<%=data.id%>?_method=put" method="post">
+    <input  name="name" value="<%=data.name%>">
+    <input  name="price" value="<%=data.price%>">
+    <input  name="image" value="<%=data.image_link%>">
+    <input  name="description" value="<%=data.description%>">
+    <button type="submit">Update</button>
+</form>
+<form action="/delete/<%=id%>?_method=delete" method="post">
+<button type="submit">delete</button>
+</form>
+
+   </main> 
+</body>
+</html>
