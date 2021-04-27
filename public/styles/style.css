@@ -1,0 +1,19 @@
+
+body{
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+}
+nav {
+    display: inline;
+}
